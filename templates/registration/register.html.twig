@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<div class="registration-form">
+    {{ form_start(registrationForm) }}
+		<div class="form-icon">
+			<span>
+				<i class="icon icon-user"></i>
+			</span>
+			<h4>Register</h4>
+		</div>
+		{{ form_row(registrationForm.firstname, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Firstname *'
+                }}) }}
+		{{ form_row(registrationForm.lastname, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Lastname *'
+                }}) }}
+		{{ form_row(registrationForm.email, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Email *'
+                }}) }}
+        {{ form_row(registrationForm.plainPassword, {
+			'attr':
+				{
+					'class':'form-control item',
+					'placeholder':'Password *'
+				}}) }}
+		{{ form_row(registrationForm.birthday, {
+            'attr':
+                {
+                    'class':'form-control item'
+                }}) }}
+		{{ form_row(registrationForm.phone, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Phone *'
+                }}) }}
+		{{ form_row(registrationForm.address, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Address *'
+                }}) }}
+		{{ form_row(registrationForm.raison_social, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Raison social'
+                }}) }}
+		{{ form_row(registrationForm.siret, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Siret '
+                }}) }}
+		{{ form_row(registrationForm.statut_juridique, {
+            'attr':
+                {
+                    'class':'form-control item',
+					'placeholder':'Statut juridique'
+                }}) }}
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-block create-account">Connecter</button>
+        </div>
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}
